@@ -2,6 +2,7 @@ import os
 import psycopg2
 import psycopg2.extras
 
+
 def get_connection_string():
     # setup connection string
     # to do this, please define these environment variables first
@@ -20,6 +21,7 @@ def get_connection_string():
         )
     else:
         raise KeyError('Some necessary environment variable(s) are not defined')
+
 
 def open_database():
     try:
