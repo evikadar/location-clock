@@ -19,7 +19,15 @@ body{
     background-size: 600px 600px;
     background-repeat: no-repeat;
     background-position: center;
-    font-size: 18px;
+    font-size: 19px;
     font-family: 'Mali', cursive;
+    font-weight: bold;
 }
 
+a{
+    color: black;
+}
+
+.d-block{
+    margin: auto;
+}

@@ -3,12 +3,12 @@
 {% block body %}
 
     <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand ml-4" href="#">
             <img src="/static/images/Harry_Potter_wordmark.svg.png" width="180" alt="">
             CLOCK
         </a>
         <form class="form-inline">
-            <button class="btn btn-sm btn-outline-secondary" type="button"
+            <button class="btn btn-sm btn-outline-secondary mr-5" type="button"
                     data-toggle="modal" data-target="#addPersonModal">Add person
             </button>
         </form>
@@ -57,13 +57,13 @@
         </div>
     </nav>
     <div class="center container">
-        <!--<img src="/static/images/clock-dial.png" width="630" id="clock" class="center">-->
         <div class="row px-5 py-3">
             <div class="col"></div>
             <div class="col"></div>
             <div class="col">On the road</div>
             <div class="col"></div>
-            <div class="col">Codecool</div>
+            <div class="col" data-number="1" data-toggle="modal" data-target="#locationModal"><a href="#">Codecool</a>
+            </div>
             <div class="col"></div>
             <div class="col"></div>
         </div>
@@ -72,25 +72,26 @@
         </div>
         <div class="row p-5">
             <div class="col"></div>
-            <div class="col">NNG</div>
+            <div class="col" data-number="10" data-toggle="modal" data-target="#locationModal"><a href="#">NNG</a></div>
             <div class="col"></div>
             <div class="col"></div>
             <div class="col"></div>
-            <div class="col">Post</div>
+            <div class="col" data-number="2" data-toggle="modal" data-target="#locationModal"><a href="#">Post</a></div>
             <div class="col"></div>
         </div>
-         <div class="row p-2">
+        <div class="row p-2">
             <div class="col"></div>
         </div>
         <div class="row p-5">
             <div class="col"></div>
-            <div class="col">Something</div>
+            <div class="col" data-number="9" data-toggle="modal" data-target="#locationModal"><a href="#">Something</a>
+            </div>
             <div class="col"></div>
             <div class="col"></div>
+            <div class="col">o</div>
             <div class="col"></div>
             <div class="col"></div>
-            <div class="col"></div>
-            <div class="col">Home</div>
+            <div class="col" data-number="3" data-toggle="modal" data-target="#locationModal"><a href="#">Home</a></div>
             <div class="col"></div>
         </div>
         <div class="row p-3">
@@ -98,26 +99,59 @@
         </div>
         <div class="row p-4">
             <div class="col"></div>
-            <div class="col">Other</div>
+            <div class="col" data-number="8" data-toggle="modal" data-target="#locationModal"><a href="#">Other</a>
+            </div>
             <div class="col"></div>
             <div class="col"></div>
             <div class="col"></div>
             <div class="col"></div>
-            <div class="col">Something</div>
+            <div class="col" data-number="4" data-toggle="modal" data-target="#locationModal"><a href="#">Something</a>
+            </div>
             <div class="col"></div>
         </div>
-
         <div class="row px-5 pt-5 pb-3">
             <div class="col"></div>
             <div class="col"></div>
-            <div class="col">MOL</div>
+            <div class="col" data-number="7" data-toggle="modal" data-target="#locationModal"><a href="#">MOL</a></div>
             <div class="col"></div>
-            <div class="col">Bank</div>
+            <div class="col" data-number="5" data-toggle="modal" data-target="#locationModal"><a href="#">Bank</a></div>
             <div class="col"></div>
             <div class="col"></div>
         </div>
         <div class="row">
-            <div class="col">Hogwarts</div>
+            <div class="col" data-number="6" data-toggle="modal" data-target="#locationModal"><a href="#">Hogwarts</a>
+            </div>
         </div>
+
+        <div class="modal fade" tabindex="-1" role="dialog" id="locationModal"
+             aria-labelledby="locationModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Edit location</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div>
+                                <label class="d-block" for="location_name">New location name</label>
+                                <input class="d-block" id="location_name" type="text" placeholder="Name">
+                            </div>
+                            <div>
+                                <label class="d-block" for="location_coordinates">Location coordinates</label>
+                                <input class="d-block" id="location_name" type="text" placeholder="#">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 {% endblock %}
