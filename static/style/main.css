@@ -1,0 +1,25 @@
+body{
+    background-color: white;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#clock{
+    z-index: -1;
+}
+
+.center.container{
+    background-image: url(/static/images/clock-dial.png);
+    text-align: center;
+    height: 600px;
+    background-size: 600px 600px;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 18px;
+    font-family: 'Mali', cursive;
+}
+
