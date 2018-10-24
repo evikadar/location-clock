@@ -1,7 +1,17 @@
 body{
-    background-color: black;
+    background-color: white;
 }
 
-.center{
-    margin: auto;
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#clock{
+    z-index: -1;
+}
+
+.center.container{
+    background-image: ;
 }
