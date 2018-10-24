@@ -21,5 +21,38 @@ body{
     background-position: center;
     font-size: 18px;
     font-family: 'Mali', cursive;
+    z-index: 1;
 }
+
+.smallHandle {
+    height: 200px;
+    display: block;
+    margin: auto;
+}
+
+.floor0 {
+    position: absolute;
+    z-index: 0;
+}
+
+.floor1 {
+    position: absolute;
+    z-index: 1;
+}
+
+.containerForClockHand {
+    text-align: center;
+    height: 600px;
+    background-size: 600px 600px;
+}
+
+.clockHandDiv {
+    display: block;
+    margin: 10% 30% 38% 35%;
+}
+
+
+
+
+
 

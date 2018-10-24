@@ -2,61 +2,65 @@
 
 {% block body %}
 
-    <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand" href="#">
-            <img src="/static/images/Harry_Potter_wordmark.svg.png" width="180" alt="">
-            CLOCK
-        </a>
-        <form class="form-inline">
-            <button class="btn btn-sm btn-outline-secondary" type="button"
-                    data-toggle="modal" data-target="#addPersonModal">Add person
-            </button>
-        </form>
-        <div class="modal fade" id="addPersonModal" tabindex="-1" role="dialog" aria-labelledby="addPersonModalLabel"
-             aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="addPersonModalLabel">Add new person</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="form-group">
-                                <label for="newpersonname">Name</label>
-                                <input type="text" class="form-control" id="newpersonname"
-                                       placeholder="Enter name">
-                            </div>
-                            <div class="form-group">
-                                <label for="color">Color</label>
-                                <select>
-                                    <option value="red">Red</option>
-                                    <option value="green">Green</option>
-                                    <option value="blue">Blue</option>
-                                    <option value="black">Black</option>
-                                    <option value="brown">Brown</option>
-                                    <option value="yellow">Yellow</option>
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+        <img src="/static/images/Harry_Potter_wordmark.svg.png" width="180" alt="">
+        CLOCK
+    </a>
+    <form class="form-inline">
+        <button class="btn btn-sm btn-outline-secondary" type="button"
+                data-toggle="modal" data-target="#addPersonModal">Add person
+        </button>
+    </form>
+    <div class="modal fade" id="addPersonModal" tabindex="-1" role="dialog" aria-labelledby="addPersonModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addPersonModalLabel">Add new person</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="newpersonname">Name</label>
+                            <input type="text" class="form-control" id="newpersonname"
+                                   placeholder="Enter name">
+                        </div>
+                        <div class="form-group">
+                            <label for="color">Color</label>
+                            <select>
+                                <option value="red">Red</option>
+                                <option value="green">Green</option>
+                                <option value="blue">Blue</option>
+                                <option value="black">Black</option>
+                                <option value="brown">Brown</option>
+                                <option value="yellow">Yellow</option>
 
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Phone number</label>
-                                <input type="password" class="form-control" id="phone"
-                                       placeholder="phone number">
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                        <button type="submit" class="btn btn-primary">Save</button>
-                    </div>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone number</label>
+                            <input type="password" class="form-control" id="phone"
+                                   placeholder="phone number">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save</button>
                 </div>
             </div>
         </div>
-    </nav>
-    <div class="center container">
+    </div>
+</nav>
+
+<div class="everythingInBody">
+
+
+    <div class="center container floor0">
         <!--<img src="/static/images/clock-dial.png" width="630" id="clock" class="center">-->
         <div class="row px-5 py-3">
             <div class="col"></div>
@@ -79,7 +83,7 @@
             <div class="col">Post</div>
             <div class="col"></div>
         </div>
-         <div class="row p-2">
+        <div class="row p-2">
             <div class="col"></div>
         </div>
         <div class="row p-5">
@@ -87,7 +91,9 @@
             <div class="col">Something</div>
             <div class="col"></div>
             <div class="col"></div>
-            <div class="col"></div>
+            <div class="col">
+
+            </div>
             <div class="col"></div>
             <div class="col"></div>
             <div class="col">Home</div>
@@ -120,4 +126,22 @@
             <div class="col">Hogwarts</div>
         </div>
     </div>
+
+    <div class="containerForClockHand">
+        <div class="clockHandDiv floor1">
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg class="smallHandle" id="clockhand" viewBox="0 0 1052.362179 744.09447" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 500 500" xml:space="preserve">
+    <path id="path1" fill="#ff0000" stroke="#231F20"
+          d="m526.14 37.897c-1.1171 62.724-46.248 69.01-46.875 96.004-0.62724 26.972 13.471 28.853 18.802 28.853 5.3684 0 16.634-3.9343 16.289-15.683-0.32592-11.122-4.3907-14.43 0-31.366-5.018 10.663-11.275 15.728-18.802 16.983 6.8997 3.7635 10.344 7.476 10.657 9.3578 0.34584 2.0752-0.59705 11.264-8.7512 11.264-8.7814 0-11.619-8.3904-10.051-20.622 1.6472-12.849 31.955-33.877 35.092-47.049 0 26.344-1.8805 103.48-1.7329 100.86-2.2404 80.957-9.3578 132.26-9.3578 205.09 0 72.5 0.03938 140.4 7.105 249.37-14.624 3.5541-25.734 16.083-25.734 31.799 2e-5 18.455 14.991 33.445 33.445 33.445s33.359-14.99 33.359-33.445c3e-5 -15.746-11.086-28.274-25.734-31.799 7.0656-108.96 7.105-176.87 7.105-249.37 0-72.835-7.2039-124.13-9.4444-205.09 0.1476 2.6246-1.7329-74.512-1.7329-100.86 3.1362 13.172 33.531 34.2 35.178 47.049 1.5681 12.231-1.2695 20.622-10.051 20.622-8.1542 0-9.1837-9.1888-8.8379-11.264 0.31361-1.8817 3.7577-5.5942 10.657-9.3578-7.5269-1.2545-13.784-6.3194-18.802-16.983 4.3907 16.936 0.3259 20.244 0 31.366-0.34429 11.749 10.921 15.683 16.289 15.683 5.3316 0 19.516-1.8815 18.889-28.853-0.62775-26.993-45.845-33.279-46.962-96.004zm0.08665 615.79c10.546 0 19.062 8.5165 19.062 19.062s-8.5165 19.149-19.062 19.149-19.149-8.6032-19.149-19.149 8.6032-19.062 19.149-19.062z"
+          fill-rule="evenodd" stroke-linejoin="round" stroke-width="2.7508"/>
+</svg>
+        </div>
+    </div>
+
+</div>
+
+
+<button id="colorRed">Red</button>
+<button id="rotateBtn">Rotate</button>
+<button id="newHandBtn">New hand</button>
 {% endblock %}
