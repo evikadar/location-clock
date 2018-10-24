@@ -2,7 +2,7 @@ import connection
 
 
 @connection.connection_handler
-def get_locations_for_user(user_id):
+def get_locations_for_user(dict_cur, user_id):
     dict_cur.execute("""
                          SELECT id, title FROM locations
                          WHERE user_id = %(user_id)s
@@ -13,7 +13,7 @@ def get_locations_for_user(user_id):
 
 
 @connection.connection_handler
-def get_people_for_user(user_id):
+def get_people_for_user(dict_cur, user_id):
     dict_cur.execute("""
                          SELECT id, name FROM people
                          WHERE user_id = %(user_id)s;
