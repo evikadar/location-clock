@@ -5,7 +5,6 @@ function changeColor(color) {
     });
 }
 
-
 // The animate to function should have a parameter that tells it where it should point.
 function rotateAround(degree, initialDegree) {
     $('#rotateBtn').click(function () {
@@ -25,11 +24,8 @@ function createNewHand(color, degree) {
     $('#newHandBtn').click(function () {
         let newHand = $('.clockHandDiv').clone();
         console.log(newHand);
-
     });
-
 }
-
 
 function main() {
     changeColor('#ff43aa');
