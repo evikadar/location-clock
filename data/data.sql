@@ -7,7 +7,7 @@ DROP SEQUENCE IF EXISTS public.locations_id_seq;
 CREATE TABLE locations (
     id integer NOT NULL CHECK (id > 0 AND id < 12),
     title text NOT NULL ,
-    location text NOT NULL
+    location varchar(12) CHECK (location ~* '^[23456789CFGHJMPQRVWX+]') NOT NULL
 );
 
 DROP TABLE IF EXISTS public.people;
