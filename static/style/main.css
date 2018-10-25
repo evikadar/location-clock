@@ -1,4 +1,4 @@
-body{
+body {
     background-color: white;
 }
 
@@ -8,54 +8,226 @@ body{
     margin-right: auto;
 }
 
-#clock{
+#clock {
     z-index: -1;
 }
 
-.center.container{
+a {
+    font-family: 'Mali', cursive;
+}
+
+.background-image {
     background-image: url(/static/images/clock-dial.png);
     text-align: center;
     height: 600px;
+    width: 600px;
     background-size: 600px 600px;
     background-repeat: no-repeat;
     background-position: center;
+    margin: auto;
+
+}
+
+.center.container {
+    text-align: center;
+    height: 600px;
+    background-size: 600px 600px;
     font-size: 19px;
     font-family: 'Mali', cursive;
     font-weight: bold;
-    z-index: 1;
 }
 
-a{
+a {
     color: black;
-}
-
-.smallHandle {
-    height: 200px;
-    display: block;
-    margin: auto;
 }
 
 .floor0 {
     position: absolute;
     z-index: 0;
+    height: 600px;
+
 }
 
 .floor1 {
     position: absolute;
     z-index: 1;
+    height: 600px;
+
+}
+
+.floor2 {
+    position: absolute;
+    z-index: 12;
+    height: 600px;
+}
+
+.floor3 {
+    position: absolute;
+    z-index: 3;
+    height: 600px;
+}
+
+.floor4 {
+    position: absolute;
+    z-index: 3;
+    height: 600px;
+}
+
+.floor5 {
+    position: absolute;
+    z-index: 3;
+    height: 600px;
+}
+
+.floor6 {
+    position: absolute;
+    z-index: 3;
+    height: 600px;
+}
+
+.floor13 {
+    position: absolute;
+    z-index: 13;
+    height: 600px;
 }
 
 .containerForClockHand {
     text-align: center;
-    height: 600px;
-    background-size: 600px 600px;
+    border: thick darkcyan;
 }
 
 .clockHandDiv {
+    background-size: 600px 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 600px;
+    margin-top: -300px;
+    margin-left: -300px;
     display: block;
-    margin: 10% 30% 38% 35%;
 }
 
-.d-block{
+.d-block {
     margin: auto;
 }
+
+#smallHandle {
+    height: 328px;
+    width: 600px;
+    position: absolute;
+    margin-top: 93px;
+
+}
+
+.clock-bg {
+    height: 600px;
+}
+
+.text-block {
+    position: relative;
+    background-color: rgba(10, 10, 10, 0.8);
+    color: white;
+    width: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.base {
+    width: 800px;
+    min-height: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.background-image2 {
+    background: url(/static/images/clock-dial.png) center center no-repeat;
+    background-size: 600px 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 600px;
+    margin-top: -212px;
+    margin-left: -300px;
+}
+
+.twelveoclock {
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 370px;
+}
+
+.oneoclock {
+    position: absolute;
+    margin-top: 67px;
+    margin-left: 545px;
+}
+
+.twooclock {
+    position: absolute;
+    margin-top: 175px;
+    margin-left: 640px;
+}
+
+.threeoclock {
+    position: absolute;
+    margin-top: 330px;
+    margin-left: 700px;
+}
+
+.fouroclock {
+    position: absolute;
+    margin-top: 475px;
+    margin-left: 655px;
+}
+
+.fiveoclock {
+    position: absolute;
+    margin-top: 590px;
+    margin-left: 539px;
+}
+
+.sixoclock {
+    position: absolute;
+    margin-top: 620px;
+    margin-left: 370px;
+}
+
+.sevenoclock {
+    position: absolute;
+    margin-top: 584px;
+    margin-left: 184px;
+}
+
+.eightoclock {
+    position: absolute;
+    margin-top: 476px;
+    margin-left: 106px;
+}
+
+.nineoclock {
+    position: absolute;
+    margin-top: 330px;
+    margin-left: 60px;
+}
+
+.tenoclock {
+    position: absolute;
+    margin-top: 175px;
+    margin-left: 78px;
+}
+
+.elevenoclock {
+    position: absolute;
+    margin-top: 42px;
+    margin-left: 193px;
+}
+
+
+
+
+
+
+
+
