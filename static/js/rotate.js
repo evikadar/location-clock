@@ -8,6 +8,7 @@ function changeColor(color) {
 // The animate to function should have a parameter that tells it where it should point.
 function rotateAround(degree, initialDegree) {
     $('#rotateBtn').click(function () {
+        console.log('Rotate clicked');
         $('#clockhand').rotate(
             {
                 animateTo: degree,
