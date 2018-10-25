@@ -4,15 +4,21 @@ $(function () {
     $('#new-person').on('submit', function (event) {
         let form = $(this);
         event.preventDefault();
-        event.stopPropagation();
         let data = form.serializeArray();
         $.ajax({
-            url: form.action,
+            url: '/save-new-person',
             type: 'POST',
             data: data,
             dataType: "json"
         }).done(function (data) {
-            dataHandler.clockData.people.push(data)
+            if (data.id) {
+                dataHandler.clockData.people.push(data);
+                let color = data.color;
+                createNewHand(color, 330);
+                $('#addPersonModal').modal('hide');
+            } else {
+                alert('DB error, try again')
+            }
         });
     })
 });

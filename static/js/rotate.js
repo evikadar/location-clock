@@ -23,7 +23,7 @@ function createNewHand(color, degree) {
     } else if ($('.floor5').length < 1) {
         newHand.addClass('floor5');
     } else {
-        alert('You cant add more than 4 persons in this MVP version');
+        alert("You can't add more than 4 people in this MVP version");
     }
     $('.handCloner').append(newHand);
 }

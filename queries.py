@@ -25,13 +25,16 @@ def get_people_for_user(dict_cur, user_id):
 
 @connection.connection_handler
 def save_new_person(dict_cur, name, phone, color, user_id):
-    dict_cur.execute("""
-                        INSERT INTO people (name, phone, color, status, user_id)
-                        VALUES (%(name)s, %(phone)s, %(color)s, 'pending', %(user_id)s)
-                        RETURNING id, name, phone, color, status;
-                     """,
-                     {'name': name, 'phone': phone, 'color': color, 'user_id': user_id})
-    return dict_cur.fetchone()
+    try:
+        dict_cur.execute("""
+                            INSERT INTO people (name, phone, color, status, user_id)
+                            VALUES (%(name)s, %(phone)s, %(color)s, 'pending', %(user_id)s)
+                            RETURNING id, name, phone, color, status;
+                         """,
+                         {'name': name, 'phone': phone, 'color': color, 'user_id': user_id})
+        return dict_cur.fetchone()
+    except psycopg2.IntegrityError as err:
+        raise ValueError(f"DB error: {err}")
 
 
 @connection.connection_handler

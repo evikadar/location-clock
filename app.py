@@ -28,10 +28,11 @@ def save_new_person():
         new_person_color = request.form['color']
         new_person_phone = request.form['phone']
         user_id = session['user_id']
-        keys = ('id', 'name', 'phone', 'color', 'status')
-        new_person_data = queries.save_new_person(new_person_name, new_person_phone, new_person_color, user_id)
-        person_data = {k: v for k, v in zip(keys, new_person_data)}
-        return json.dumps(person_data)
+        try:
+            new_person_data = queries.save_new_person(new_person_name, new_person_phone, new_person_color, user_id)
+            return json.dumps(new_person_data)
+        except ValueError:
+            return json.dumps({'id': 0})
     return redirect(url_for('registration_and_login'))
 
 
