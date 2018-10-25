@@ -12,17 +12,25 @@ body {
     z-index: -1;
 }
 
-.center.container {
+.background-image {
     background-image: url(/static/images/clock-dial.png);
     text-align: center;
     height: 600px;
+    width: 600px;
     background-size: 600px 600px;
     background-repeat: no-repeat;
     background-position: center;
+    margin: auto;
+
+}
+
+.center.container {
+    text-align: center;
+    height: 600px;
+    background-size: 600px 600px;
     font-size: 19px;
     font-family: 'Mali', cursive;
     font-weight: bold;
-    z-index: 1;
 }
 
 a {
@@ -48,6 +56,14 @@ a {
     height: 600px;
 
 }
+
+.floor2 {
+    position: absolute;
+    z-index: 2;
+    height: 600px;
+
+}
+
 
 .containerForClockHand {
     text-align: center;
