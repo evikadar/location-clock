@@ -1,0 +1,11 @@
+.smallHandle {
+    height: 250px;
+    display: block;
+    margin: auto;
+    position: center;
+    z-index: 1;
+}
+
+.clock-bg {
+    height: 600px;
+}
