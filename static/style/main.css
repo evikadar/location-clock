@@ -99,7 +99,7 @@ a {
 .clockHandDiv {
     background-size: 600px 600px;
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     width: 600px;
     height: 600px;
@@ -144,7 +144,7 @@ a {
     background: url(/static/images/clock-dial.png) center center no-repeat;
     background-size: 600px 600px;
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     width: 600px;
     height: 600px;
