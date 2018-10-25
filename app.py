@@ -4,7 +4,7 @@ from werkzeug import security
 import json
 
 app = Flask(__name__)
-app.secret_key = 'vmi29???#@ttd@9UI5FJ%+!SWEQZRszgtzit'
+app.secret_key = 'vmi29???#@ttd@9UI5FJ%+!SoEQZRszgtzit'
 
 
 @app.route('/')
@@ -52,13 +52,13 @@ def registration():
 @app.route("/register", methods=['POST'])
 def save_user():
     if 'user_name' in session:
-        username = request.form['username']
-        password = request.form['password']
-        email = request.form['email']
-        phone = request.form['phone']
-        password = security.generate_password_hash(password)
-        return json.dumps(queries.insert_user(username, password, email, phone))
-    return redirect(url_for('registration_and_login'))
+        return redirect(url_for('index'))
+    username = request.form['username']
+    password = request.form['password']
+    email = request.form['email']
+    phone = request.form['phone']
+    password = security.generate_password_hash(password)
+    return json.dumps(queries.insert_user(username, password, email, phone))
 
 
 @app.route("/login", methods=['GET', 'POST'])
@@ -74,7 +74,7 @@ def login():
         hashed_password = hashed_password_data['password']
         if security.check_password_hash(hashed_password, password):
             session['user_name'] = user_name
-            session['user_id'] = queries.get_user_id(user_name)
+            session['user_id'] = queries.get_user_id(user_name)['id']
             return json.dumps({"invalid_data": False})
     return json.dumps({"invalid_data": True})
 

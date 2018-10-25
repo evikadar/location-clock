@@ -1,7 +1,8 @@
 {% extends 'layout.html' %}
-
+{% block head %}
+    <script type="text/javascript" src="{{ url_for('static', filename='js/rotate.js')}}" defer></script>
+{% endblock %}
 {% block body %}
-
     <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand ml-4" href="#">
             <img src="/static/images/Harry_Potter_wordmark.svg.png" width="180" alt="">
