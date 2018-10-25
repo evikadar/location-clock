@@ -12,6 +12,10 @@ body {
     z-index: -1;
 }
 
+a {
+    font-family: 'Mali', cursive;
+}
+
 .background-image {
     background-image: url(/static/images/clock-dial.png);
     text-align: center;
@@ -148,7 +152,6 @@ a {
     margin-left: -300px;
 }
 
-
 .twelveoclock {
     position: absolute;
     margin-top: 30px;
@@ -167,13 +170,11 @@ a {
     margin-left: 640px;
 }
 
-
 .threeoclock {
     position: absolute;
     margin-top: 330px;
     margin-left: 700px;
 }
-
 
 .fouroclock {
     position: absolute;
