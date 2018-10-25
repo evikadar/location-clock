@@ -16,6 +16,10 @@ a {
     font-family: 'Mali', cursive;
 }
 
+a.btn {
+    font-family: inherit;
+}
+
 .background-image {
     background-image: url(/static/images/clock-dial.png);
     text-align: center;

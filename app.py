@@ -9,12 +9,12 @@ app.secret_key = 'vmi29???#@ttd@9UI5FJ%+!SoEQZRszgtzit'
 
 @app.route('/')
 def index():
-    #if 'user_name' in session:
-    #user_id = session['user_id']
-    #locations = queries.get_locations_for_user(user_id)
-    #return render_template('main.html', locations=locations)
-    #return redirect(url_for('registration_and_login'))
-    return render_template('main.html')
+    if 'user_name' in session:
+        user_id = session['user_id']
+        locations = queries.get_locations_for_user(user_id)
+        return render_template('main.html', locations=locations)
+    return redirect(url_for('registration_and_login'))
+
 
 @app.route('/rotate')
 def rotate():

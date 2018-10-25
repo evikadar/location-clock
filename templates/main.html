@@ -9,9 +9,11 @@
             CLOCK
         </a>
         <form class="form-inline">
-            <button class="btn btn-sm btn-outline-secondary mr-5" type="button"
+            <button class="btn btn-sm btn-outline-secondary mr-2" type="button"
                     data-toggle="modal" data-target="#addPersonModal">Add person
             </button>
+            <a class="btn btn-sm btn-outline-info mr-2" href="{{ url_for('logout') }}">Logout
+            </a>
         </form>
         <div class="modal fade" id="addPersonModal" tabindex="-1" role="dialog" aria-labelledby="addPersonModalLabel"
              aria-hidden="true">

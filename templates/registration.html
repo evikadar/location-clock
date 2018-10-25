@@ -3,6 +3,16 @@
     <script src="{{ url_for('static', filename="js/registration.js") }}" defer></script>
 {% endblock %}
 {% block body %}
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand ml-4" href="#">
+            <img src="/static/images/Harry_Potter_wordmark.svg.png" width="180" alt="">
+            CLOCK
+        </a>
+        <form class="form-inline">
+            <a class="btn btn-sm btn-outline-secondary mr-5" href="{{ url_for('login') }}">Login
+            </a>
+        </form>
+    </nav>
     <div class="container px-10 py-3">
         <h2 class="my-2 text-center">Registration</h2>
         <form action="{{ url_for('save_user') }}" id="registration-form" method="post">
@@ -46,10 +56,10 @@
                     Would you like to log in now?
                 </div>
                 <div class="modal-footer">
-                    <a type="button" href="{{ url_for('index') }}" class="btn btn-outline-secondary">
+                    <a href="{{ url_for('index') }}" class="btn btn-outline-secondary">
                         Back to main page
                     </a>
-                    <a type="button" href="{{ url_for('login') }}" class="btn btn-dark">
+                    <a href="{{ url_for('login') }}" class="btn btn-dark">
                         Go to log in
                     </a>
                 </div>
