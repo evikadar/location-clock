@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+{% block body %}
+    <div class="container">
+        <h1>CLOCK</h1>
+        <h5>Please log in or register to continue!</h5>
+        <div class="container">
+            <div class="center" id="center">
+                <a type="button" id="login" href="{{ url_for('login') }}" type="button" class="btn btn-dark">Login</a>
+            </div>
+            <br><br>
+            <div>
+                <a type="button" id="register" href="{{ url_for('registration') }}" type="button" class="btn btn-info">Register</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
