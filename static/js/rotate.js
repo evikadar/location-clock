@@ -4,7 +4,7 @@ function rotateAround(degree, initialDegree) {
         $('#smallHandle').rotate(
             {
                 animateTo: degree,
-                center: ["50%", "100%"],
+                center: ["50%", "90%"],
                 callback: function () {
                     let degreeChange = degree % 360 - initialDegree;
                 }
