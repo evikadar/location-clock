@@ -37,11 +37,6 @@ a {
     color: black;
 }
 
-.smallHandle {
-    height: 200px;
-    display: block;
-    margin: auto;
-}
 
 .floor0 {
     position: absolute;
@@ -59,9 +54,38 @@ a {
 
 .floor2 {
     position: absolute;
-    z-index: 2;
+    z-index: 12;
     height: 600px;
+}
 
+.floor3 {
+    position: absolute;
+    z-index: 3;
+    height: 600px;
+}
+
+.floor4 {
+    position: absolute;
+    z-index: 3;
+    height: 600px;
+}
+
+.floor5 {
+    position: absolute;
+    z-index: 3;
+    height: 600px;
+}
+
+.floor6 {
+    position: absolute;
+    z-index: 3;
+    height: 600px;
+}
+
+.floor13 {
+    position: absolute;
+    z-index: 13;
+    height: 600px;
 }
 
 
@@ -81,12 +105,11 @@ a {
     margin: auto;
 }
 
-.smallHandle {
-    height: 300px;
+#smallHandle {
     display: block;
     margin: auto;
     position: center;
-    z-index: 1;
+    height: 300px;
 
 }
 
