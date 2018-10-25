@@ -61,41 +61,41 @@
     <div class="background-image2 floor0"></div>
 
     <div class="labels floor2">
-        <div class="twelveoclock">
-            <p>Codecool</p>
+        <div class="twelveoclock" data-number="12" data-toggle="modal" data-target="#locationModal"><a
+                href="#">Codecool</a>
         </div>
-        <div class="oneoclock">
-            <p>Magic</p>
+        <div class="oneoclock" data-number="1" data-toggle="modal" data-target="#locationModal"><a
+                href="#">Home</a>
         </div>
-        <div class="twooclock">
-            <p>NNG</p>
+        <div class="twooclock" data-number="2" data-toggle="modal" data-target="#locationModal"><a
+                href="#">NNG</a>
         </div>
-        <div class="threeoclock">
-            <p>Paskal</p>
+        <div class="threeoclock" data-number="3" data-toggle="modal" data-target="#locationModal"><a
+                href="#">Holiday</a>
         </div>
-        <div class="fouroclock">
-            <p>IBM</p>
+        <div class="fouroclock" data-number="4" data-toggle="modal" data-target="#locationModal"><a
+                href="#">IBM</a>
         </div>
-        <div class="fiveoclock">
-            <p>Daycare</p>
+        <div class="fiveoclock" data-number="5" data-toggle="modal" data-target="#locationModal"><a
+                href="#">Daycare</a>
         </div>
-        <div class="sixoclock">
-            <p>Granny's</p>
+        <div class="sixoclock" data-number="6" data-toggle="modal" data-target="#locationModal"><a
+                href="#">Granny's</a>
         </div>
-        <div class="sevenoclock">
-            <p>Coffeehouse</p>
+        <div class="sevenoclock" data-number="7" data-toggle="modal" data-target="#locationModal"><a
+                href="#">Coffeehouse</a>
         </div>
-        <div class="eightoclock">
-            <p>Gym</p>
+        <div class="eightoclock" data-number="8" data-toggle="modal" data-target="#locationModal"><a
+                href="#">Gym</a>>
         </div>
-        <div class="nineoclock">
-            <p>Lunch</p>
+        <div class="nineoclock" data-number="9" data-toggle="modal" data-target="#locationModal"><a
+                href="#">Lunch</a>
         </div>
-        <div class="tenoclock">
-            <p>GreenFox</p>
+        <div class="tenoclock" data-number="10" data-toggle="modal" data-target="#locationModal"><a
+                href="#">In the bar</a>
         </div>
-        <div class="elevenoclock">
-            <p>On The Road</p>
+        <div class="elevenoclock" data-number="11" data-toggle="modal" data-target="#locationModal"><a
+                href="#">On The Road</a>
         </div>
     </div>
     <div class="clockHandDiv floor1">
@@ -118,6 +118,37 @@
             <button id="colorRed">Red</button>
             <button id="rotateBtn">Rotate</button>
             <button id="newHandBtn">New hand</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="locationModal"
+         aria-labelledby="locationModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit location</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div>
+                            <label class="d-block" for="location_name">New location name</label>
+                            <input class="d-block" id="location_name" type="text" placeholder="Name">
+                        </div>
+                        <div>
+                            <label class="d-block" for="location_coordinates">Location coordinates</label>
+                            <input class="d-block" id="location_coordinates" type="text" placeholder="#">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
         </div>
     </div>
 </div>
