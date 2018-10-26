@@ -29,7 +29,7 @@ function createNewHand(color, degree) {
 }
 
 function main() {
-    rotateAround(240, 0);
+    rotateAround(450, 0);
     $('#newHandBtn').click(function () {
         createNewHand('#00da10')
     })
