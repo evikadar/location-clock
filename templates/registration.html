@@ -1,0 +1,69 @@
+{% extends 'layout.html' %}
+{% block head %}
+    <script src="{{ url_for('static', filename="js/registration.js") }}" defer></script>
+{% endblock %}
+{% block body %}
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand ml-4" href="#">
+            <img src="/static/images/Harry_Potter_wordmark.svg.png" width="180" alt="">
+            CLOCK
+        </a>
+        <form class="form-inline">
+            <a class="btn btn-sm btn-outline-secondary mr-5" href="{{ url_for('login') }}">Login
+            </a>
+        </form>
+    </nav>
+    <div class="container px-10 py-3">
+        <h2 class="my-2 text-center">Registration</h2>
+        <form action="{{ url_for('save_user') }}" id="registration-form" method="post">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input name="username" type="text" class="form-control" id="username" placeholder="Enter username" required
+                maxlength="20">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input name="password" type="password" class="form-control" id="password" placeholder="Password" required
+                minlength="6" maxlength="20">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input name="email" type="text" class="form-control" id="email" placeholder="Email" required
+                maxlength="20">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input name="phone" type="text" class="form-control" id="phone" placeholder="Phone" required
+                minlength="6" maxlength="20">
+            </div>
+            <input type="submit" class="btn btn-primary" value="Sign up!">
+        </form>
+        <div class="container my-5">
+            <div id="alert" class="alert alert-danger alert-dismissible fade" role="alert">
+                <strong id="alert-text"></strong>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="success-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+         aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-title">Success! <i class="fas fa-crown"></i></h5>
+                </div>
+                <div class="modal-body">
+                    Your registration was successful.
+                    Would you like to log in now?
+                </div>
+                <div class="modal-footer">
+                    <a href="{{ url_for('index') }}" class="btn btn-outline-secondary">
+                        Back to main page
+                    </a>
+                    <a href="{{ url_for('login') }}" class="btn btn-dark">
+                        Go to log in
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

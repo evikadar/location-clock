@@ -16,6 +16,10 @@ a {
     font-family: 'Mali', cursive;
 }
 
+a.btn {
+    font-family: inherit;
+}
+
 .background-image {
     background-image: url(/static/images/clock-dial.png);
     text-align: center;
@@ -99,7 +103,7 @@ a {
 .clockHandDiv {
     background-size: 600px 600px;
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     width: 600px;
     height: 600px;
@@ -144,7 +148,7 @@ a {
     background: url(/static/images/clock-dial.png) center center no-repeat;
     background-size: 600px 600px;
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     width: 600px;
     height: 600px;
@@ -224,10 +228,6 @@ a {
     margin-left: 193px;
 }
 
-
-
-
-
-
-
-
+.fa-crown {
+    color: gold;
+}

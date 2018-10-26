@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+{% block head %}
+    <script src="{{ url_for('static', filename="js/login.js") }}" defer></script>
+{% endblock %}
+{% block body %}
+    <div class="container px-10 py-3">
+        <h2 class="my-2 text-center">Login</h2>
+        <form action="{{ url_for('login') }}" id="login-form" method="post">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input name="username" type="text" class="form-control" id="username" placeholder="Enter username" required
+                maxlength="20">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input name="password" type="password" class="form-control" id="password" placeholder="Password" required
+                minlength="6" maxlength="20">
+            </div>
+            <input type="submit" class="btn btn-primary" value="Sign in!">
+        </form>
+        <div class="container my-5">
+            <div id="alert" class="alert alert-danger alert-dismissible fade" role="alert">
+                <strong id="alert-text"></strong>
+            </div>
+        </div>
+    </div>
+    {% block success_modal %}{% endblock %}
+{% endblock %}
